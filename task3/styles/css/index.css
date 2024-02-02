@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+.admin-panel {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap; }
+
+.sidebar {
+  padding-top: 30px;
+  background: #333333;
+  width: 25%; }
+  .sidebar__logo {
+    max-width: 130px;
+    margin: 0 auto; }
+    .sidebar__logo img {
+      width: 100%; }
+  .sidebar .menu {
+    padding: 0; }
+    .sidebar .menu-item {
+      width: 100%;
+      padding: 20px;
+      list-style-type: none;
+      border-top: 1px solid #2C2C2C;
+      border-bottom: 1px solid #2C2C2C;
+      color: white;
+      cursor: pointer;
+      transition: .3s; }
+      .sidebar .menu-item:hover {
+        background: #616161; }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  overflow: scroll;
+  width: 75%;
+  padding: 30px;
+  background: #DBDBDB; }
+  .content__title {
+    font-size: 24px;
+    font-weight: bold; }
+  .content__subtitle {
+    font-weight: 700;
+    margin-bottom: 20px; }
+  .content__graphics {
+    display: flex;
+    gap: 30px; }
+  .content__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; }
+  .content__item {
+    flex: 1 1 0;
+    padding: 30px;
+    background: white; }
+    .content__item-img {
+      margin: 0 auto;
+      max-width: 200px; }
+      .content__item-img img {
+        width: 100%; }
+    .content__item:last-child {
+      flex-basis: 100%; }
+    .content__item-table {
+      width: 100%;
+      border-collapse: collapse; }
+      .content__item-table tr {
+        border-bottom: 1px solid silver; }
+      .content__item-table th, .content__item-table td {
+        text-align: start;
+        padding: 14px 10px; }
+
+@media (max-width: 600px) {
+  .sidebar,
+  .content {
+    width: 100%;
+    gap: 20px;
+    padding: 20px; }
+
+  .sidebar__logo {
+    max-width: 30px; }
+  .sidebar .menu-item {
+    padding: 10px 30px;
+    font-size: 14px; }
+
+  .content__item {
+    width: 100%;
+    flex: none; }
+    .content__item-table th, .content__item-table td {
+      font-size: 12px; } }
+
+/*# sourceMappingURL=index.css.map */

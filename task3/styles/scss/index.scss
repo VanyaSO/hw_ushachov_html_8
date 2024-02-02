@@ -1,0 +1,153 @@
+$media-mob: 600px;
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.admin-panel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sidebar {
+    padding-top: 30px;
+    background: #333333;
+    width: 25%;
+
+    &__logo {
+        max-width: 130px;
+        margin: 0 auto;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .menu {
+        padding: 0;
+
+        &-item {
+            width: 100%;
+            padding: 20px;
+            list-style-type: none;
+            border-top: 1px solid #2C2C2C;
+            border-bottom: 1px solid #2C2C2C;
+            color: white;
+            cursor: pointer;
+            transition: .3s;
+
+            &:hover {
+                background: #616161;
+            }
+        }
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    overflow: scroll;
+    width: 75%;
+    padding: 30px;
+    background: #DBDBDB;
+
+
+
+    &__title {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    &__subtitle {
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    &__graphics {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+
+    }
+
+    &__item {
+        flex: 1 1 0;
+        padding: 30px;
+        background: white;
+
+        &-img {
+            margin: 0 auto;
+            max-width: 200px;
+    
+            img {
+                width: 100%;
+            }
+        }
+
+        &:last-child {
+            flex-basis: 100%;
+        }
+
+        &-table {
+            width: 100%;
+            border-collapse: collapse;
+
+            tr {
+                border-bottom: 1px solid silver;
+            }
+
+            th, td {
+                text-align: start;
+                padding: 14px 10px;
+            }
+
+        }
+    }
+
+}
+
+@media(max-width: $media-mob) {
+    .sidebar,
+    .content {
+        width: 100%;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .sidebar {
+        &__logo {
+            max-width: 30px;
+        }
+
+        .menu-item {
+            padding: 10px 30px;
+            font-size: 14px;
+        }
+    }
+
+    .content__item {
+        width: 100%;
+        flex: none;
+
+        &-table {
+            th,td {
+                font-size: 12px;
+            }
+        }
+    }
+}
